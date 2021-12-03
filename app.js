@@ -12,21 +12,7 @@ fetch("http://localhost:8888/jason_list/jasoncrew.php")
     });
 
 //Add Crew Member
-jasonListAdd.addEventListener("submit", (event) => {
-    event.preventDefault();
 
-    //http://localhost:8888/jason_list/create_crew.php
-    const mydata = { "prenom": firstNameInp.value, 'nom': lastNameInp.value };
-    fetch('http://localhost:8888/jason_list/create_crew.php', {
-        method: 'POST', // or 'PUT'
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(mydata),
-    })
-        .then((res) => { return res.json() })
-        .then((data) => { console.log(data); })
-});
 
 const tableTemp = (html) => {
     return `<table>
